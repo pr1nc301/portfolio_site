@@ -240,6 +240,21 @@ h2 {
     padding: 36px 0 6px;
 }
 
+.profile-img{
+    width: 82px;
+    height: 82px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+.profile-img.large {
+    width: 160px;
+    height: 160px;
+    border-radius: 22px;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
