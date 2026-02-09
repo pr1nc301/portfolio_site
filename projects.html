@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Prince</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Prince</a>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="projects.html">Projects</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link nav-cta" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Projects</h1>
+                <p class="muted">A collection of web apps I've built. </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container grid">
+                <!--Replace image/title-->
+                <article class="project-card">
+                    <a class="thumb" href="#" aria-label="Project A"></a>
+                    <h3>Project A</h3>
+                    <p class="muted">Short description. Stack: React / Node / DB</p>
+                    <div class="card-actions">
+                      <a class="btn mini" href="#" onclick="return false;">Live</a>
+                      <a class="btn mini ghost" href="#" onclick="return false;">GitHub</a>
+                    </div>
+                  </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Prince</span>
+            <span class="muted">Built with HTML • CSS • JS</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
