@@ -25,3 +25,18 @@ if (toTop) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
+//Reveal on scroll to add a nice animation
+const revealTargets = document.querySelectorAll(".section, .project-card, .hero-text, .hero-card");
+revealTargets.forEach(el => el.classList.add("reveal"));
+
+const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    },
+    { threshold: 0.12 }
+);
+  
+revealTargets.forEach(el => observer.observe(el));
