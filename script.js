@@ -40,3 +40,20 @@ const observer = new IntersectionObserver(
 );
   
 revealTargets.forEach(el => observer.observe(el));
+
+
+//Project search filter
+const searchInput = document.getElementById("projectSearch");
+if (searchInput) {
+  const cards = Array.from(document.querySelectorAll(".project-card"));
+
+  searchInput.addEventListener("input", () => {
+    const q = searchInput.value.trim().toLowerCase();
+
+    cards.forEach(card => {
+      const title = (card.dataset.title || card.querySelector("h3")?.textContent || "").toLowerCase();
+      const matches = title.includes(q);
+      card.style.display = matches ? "" : "none";
+    });
+  });
+}
