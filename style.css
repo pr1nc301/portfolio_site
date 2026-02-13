@@ -423,6 +423,11 @@ input:focus, textarea:focus{
 .site-footer {
     border-top: 1px solid rgba(255, 255, 255, .08);
     padding: 22px 0;
+    position:fixed;
+    left:0px;
+    bottom:10px;
+    height:30px;
+    width:100%;
 }
 
 .footer-inner {
