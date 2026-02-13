@@ -57,3 +57,28 @@ if (searchInput) {
     });
   });
 }
+
+//Contact form validation
+const contactForm = document.getElementById("contactForm");
+const formMsg = document.getElementById("formMsg");
+
+if (contactForm && formMsg) {
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = contactForm.querySelector('input[type="text"]')?.value.trim() || "";
+        const email = contactForm.querySelector('input[type="email"]')?.value.trim() || "";
+        const message = contactForm.querySelector("textarea")?.value.trim() || "";
+
+        const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!name || !email || !message) {
+            showMsg("Please fill out all fields.", false);
+            return;
+        }
+        if (!emailOk) {
+            showMsg("Please enter a valid email address.", false);
+            return;
+        }
+    })       
+}
